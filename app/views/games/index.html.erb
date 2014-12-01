@@ -1,0 +1,15 @@
+<%= render partial: "header" %>
+
+<%= render partial: "new_game_button" %>
+
+<p id="recent_games">Recently completed games:</p>
+
+<ul id="games_list">
+	<% @games.each do |game| %>
+		<li id="finished_game">
+			<%= link_to game.word, game %>
+		</li>
+	<% end %>
+</ul>
+
+

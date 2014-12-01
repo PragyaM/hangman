@@ -1,0 +1,67 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#filtered_word {
+	font-size: 40px;
+	color: green;
+}
+
+#new_guess {
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+input[type=text]{
+	font-size: 20px;
+	width: 30px;
+	text-transform: uppercase;
+}
+
+.flash_alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+}
+
+.image {
+	position: fixed;
+}
+
+#lost_text {
+	font-size: 30px;
+	position: relative;
+	top: -300;
+	left: 100;
+}
+
+#won_text {
+	font-size: 30px;
+	position: relative;
+	top: -300;
+	left: 100;
+}
+
+#outcome {
+	position: relative;
+	top: -3000;
+	left: 1000;
+}
+
+#wrong_letters {
+	color: #b94a48;
+	font-size: 20px;
+	position: relative;
+	top: -80px;
+	left: -50px;
+	text-transform: uppercase;
+}
+
+#remaining_letters {
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+#alert {
+	color: red;
+}

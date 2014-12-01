@@ -1,0 +1,35 @@
+<%= render partial: "header" %>
+
+<h2 id='filtered_word'><%= filtered_word(@game) %></h2>
+
+<%= image_tag image_for_lives(@game.lives_remaining) %>
+
+<p id="wrong_letters">
+	<%= wrong_letters(@game) %>
+</p>
+
+<p id="remaining_letters">
+	<%= remaining_letters(@game) %>
+</p>
+
+<p id='outcome'>
+	<% if @game.won? %>
+		<%= render partial: "won" %>
+	<% elsif @game.lost? %>
+		<%= render partial: "lost" %>
+	<% end %>
+</p>
+
+<% if @game.won? || @game.lost? %>
+	<%= render partial: "new_game_button" %>
+<% else %>
+	<%= form_for [@game, Guess.new] do |f| %>
+		<p id="new_guess"> Guess:
+			<%= f.text_field :letter, autofocus: true %>
+			<%= f.submit "->" %>
+		</p>
+	<% end %>
+	<% if alert %>
+		<div id="alert"><%= alert %></div>
+	<% end %>
+<% end %>
